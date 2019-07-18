@@ -1,0 +1,8 @@
+-
+  name: Copy file to target servers
+  hosts: all
+  tasks:
+    - name: copy file
+      copy:
+        src: /Users/widasnavneet/Desktop/navneet/ansible_learning/exercise-1-copyfile/inventory.txt
+        dest: /home/opc/

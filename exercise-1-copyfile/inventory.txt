@@ -1,0 +1,2 @@
+target1 ansible_host=132.145.62.25 ansible_user=opc
+target2 ansible_host=132.145.70.208 ansible_user=opc
