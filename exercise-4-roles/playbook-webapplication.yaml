@@ -3,21 +3,8 @@
   name: Deploy a web application
   hosts: db_and_web_servers
   gather_facts: no
-  tasks:
-    - name: updating the apt repository
-      command: apt update
-
-    - name: Install dependencies
-      apt: name={{ item }} state=present
-      with_items:
-       - python
-       - python-setuptools
-       - python-dev
-       - build-essential
-       - python-pip
-       - python-mysqldb
-
-
-
-    - include: tasks/deploy_db.yml
-    - include: tasks/deploy_app.yml
+  roles:
+    - python
+    - mysql_db
+    - flask_web
+    
