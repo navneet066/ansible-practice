@@ -1,0 +1,10 @@
+#retreving the file name from a given path in linux
+-
+  name: Get filename
+  hosts: localhost
+  vars:
+    file_path: /etc/hosts
+  tasks:
+  - name: Get filename
+    debug:
+      msg: File Name = {{file_path | basename }}
