@@ -29,7 +29,7 @@
 
     - name: Install mysql-server
       apt:
-       name: "{{item}}"
+       name: "{{ item }}"
        allow_unauthenticated: yes
        state: present
        update_cache: yes
