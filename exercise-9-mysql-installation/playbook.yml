@@ -1,0 +1,47 @@
+#this playbook is for installing mysql 5.7 on specific OS
+- name: Installing mysql 5.7
+  hosts: mysqlhost
+  vars:
+    home_dir: "/home/instance"
+    non_interactive_mysql: noninteractive
+    db_user: root
+    db_password: Passw0rd
+  tasks:
+    - name: update repo
+      command: apt update
+
+
+    - name: Install dependencies
+      apt: name={{ item }} state=present
+      with_items:
+       - python
+       - python-setuptools
+       - python-dev
+       - build-essential
+       - python-pip
+       - python-mysqldb
+
+
+    - name: Add official APT repository
+      apt_repository:
+        repo: "deb http://repo.mysql.com/apt/debian/ jessie mysql-5.7"
+
+
+    - name: Install mysql-server
+      apt:
+       name: "{{item}}"
+       allow_unauthenticated: yes
+       state: present
+       update_cache: yes
+      with_items:
+      - mysql-server
+
+    - name: Ensure mysql root password is updated for all root accounts
+      mysql_user:
+       name: "{{ db_user }}"
+       host: localhost
+       login_unix_socket: /var/run/mysqld/mysqld.sock
+       password: "{{ db_password }}"
+       priv: '*.*:ALL,GRANT'
+       check_implicit_admin: true
+      become: yes
