@@ -3,22 +3,6 @@
   hosts: keepalived_hosts
   become: yes
   tasks:
-    - name: installation of httpd
-      yum:
-        name: httpd
-        state: present
-
-    - name: installation of keepalived
-      yum: 
-       name: keepalived
-       state: present
-
-    - name: copy configuration file to server1
-      template:
-        src: templates/keepalived.conf_server1.j2
-        dest: /etc/keepalived/keepalived.conf
-
-    - name: copy configuration file to server2
-      template:
-        src: templates/keepalived.conf_server2.j2
-        dest: /etc/keepalived/keepalived.conf
+    - include: tasks/installing_httpd.yml
+    - include: tasks/installing_keepalived.yml
+    - include: tasks/configuring_keepalived.yml
