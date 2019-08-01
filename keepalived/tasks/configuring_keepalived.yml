@@ -2,10 +2,10 @@
 
   - name: copy configuration file to server1
     template:
-      src: templates/keepalived.conf_server1.j2
+      src: templates/server1_keepalived.conf.j2
       dest: /etc/keepalived/keepalived.conf
 
   - name: copy configuration file to server2
     template:
-      src: templates/keepalived.conf_server2.j2
+      src: templates/server2_keepalived.conf.j2
       dest: /etc/keepalived/keepalived.conf
