@@ -1,7 +1,7 @@
 ---
-notification_email: admins@widas.de
-notification_email_from: keepalived@lb1.dcost.wimcon1.widas.de
-smtp_server: 213.199.154.202
+notification_email: nandanjha.navneet@gmail.com
+notification_email_from: hello@blabla.com
+smtp_server: xxx.xxx.xxx.xxx
 interface1: bond0
 interface2: bond0
 unicast_src_ip_server_1: 172.31.12.251
