@@ -1,0 +1,11 @@
+---
+notification_email: admins@widas.de
+notification_email_from: keepalived@lb1.dcost.wimcon1.widas.de
+smtp_server: 213.199.154.202
+interface1: bond0
+interface2: bond0
+unicast_src_ip_server_1: 172.31.12.251
+unicast_peer_server_1: 172.31.12.252
+virtual_ipaddress: 172.31.12.250
+unicast_src_ip_server_2: 172.31.12.252
+unicast_peer_server_2: 172.31.12.251
