@@ -4,6 +4,6 @@ keepalived2: 192.168.5.148
 notification_email: nandanjha.navneet@gmail.com
 notification_email_from: hello@blabla.com
 smtp_server: xxx.xxx.xxx.xxx
-interface1: enp0s3
-interface2: enp0s3
+keepalived1_interface: enp0s3
+keepalived2_interface: enp0s3
 virtual_ipaddress: 192.168.5.149

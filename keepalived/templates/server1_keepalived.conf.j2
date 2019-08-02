@@ -20,7 +20,7 @@ global_defs {
 
 vrrp_instance VI_apache2_dcos_test {
     state MASTER
-    interface {{ interface1 }}
+    interface {{ keepalived1_interface }}
     virtual_router_id 1
     smtp_alert
     priority 200
