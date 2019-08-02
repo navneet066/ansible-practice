@@ -25,9 +25,9 @@ vrrp_instance VI_apache2_dcos_test {
     smtp_alert
     priority 200
     advert_int 1
-    unicast_src_ip {{ unicast_src_ip_server_1 }}
+    unicast_src_ip {{ keepalived1 }}
     unicast_peer {
-        {{ unicast_peer_server_1 }}
+        {{ keepalived2 }}
     }
     virtual_ipaddress {
         {{ virtual_ipaddress }}

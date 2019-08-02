@@ -23,11 +23,11 @@ vrrp_instance VI_apache2_dcos_test {
     interface {{ interface2 }}
     virtual_router_id 1
     smtp_alert
-    priority 200
+    priority 100
     advert_int 1
-    unicast_src_ip {{unicast_src_ip_server_2 }}
+    unicast_src_ip {{ keepalived2 }}
     unicast_peer {
-        {{ unicast_peer_server_2 }}
+        {{ keepalived1 }}
     }
     virtual_ipaddress {
         {{ virtual_ipaddress }}

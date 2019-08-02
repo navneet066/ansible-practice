@@ -1,11 +1,9 @@
 ---
+keepalived1: 192.168.5.147
+keepalived2: 192.168.5.148
 notification_email: nandanjha.navneet@gmail.com
 notification_email_from: hello@blabla.com
 smtp_server: xxx.xxx.xxx.xxx
 interface1: enp0s3
 interface2: enp0s3
-unicast_src_ip_server_1: 192.168.5.147
-unicast_peer_server_1: 192.168.5.148
 virtual_ipaddress: 192.168.5.149
-unicast_src_ip_server_2: 192.168.5.148
-unicast_peer_server_2: 192.168.5.147
