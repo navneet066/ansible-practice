@@ -5,5 +5,5 @@
   tasks:
     - include: tasks/installing_httpd.yml
     - include: tasks/installing_keepalived.yml
-    - include: enabling_and_start_keepalived.yml
+    - include: tasks/enabling_and_start_keepalived.yml
     - include: tasks/configuring_keepalived.yml
