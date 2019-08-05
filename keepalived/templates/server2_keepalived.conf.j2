@@ -2,7 +2,7 @@
 
 ! Configuration File for keepalived
 vrrp_script chk_apache2 {
-    script "killall -0 apache2"
+    script "killall -0 httpd"
     interval 1
     rise 60
     fall 1

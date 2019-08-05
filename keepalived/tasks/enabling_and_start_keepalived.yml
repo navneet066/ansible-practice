@@ -3,8 +3,3 @@
     service:
       name: keepalived
       enabled: yes
-
-  - name: start the keepalived service
-    service:
-      name: keepalived
-      state: restarted
