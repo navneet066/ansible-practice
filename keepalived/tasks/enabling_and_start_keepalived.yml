@@ -1,5 +1,0 @@
----
-  - name: enable the keepalived service
-    service:
-      name: keepalived
-      enabled: yes
